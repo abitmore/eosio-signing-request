@@ -155,17 +155,11 @@ esr://gmNgZGRkAIFXBqEFopc6760yugsVYWBggtKCMIEFRnclpF9eTWUACgAA
 
 These encoded strings can be shared and viewed by a number of applications, including:
 
-**EOSIO.to**
+**Unicove**
 
-This website is a utility which allows the viewing of a signing request as well as the opportunity to create a signature for it.  The above encoded request can be passed to the eosio.to domain:
+This website is a utility which allows the viewing of a signing request as well as the opportunity to create a signature for it. The above encoded request can be passed to the Unicove prompt page, using Jungle 4 as the testnet:
 
-https://eosio.to/gmNgZGRkAIFXBqEFopc6760yugsVYWBggtKCMIEFRnclpF9eTWUACgAA
-
-**EOSIO URI Builder**
-
-This web application allows for the viewing, editing, and customization of signing requests. The above encoded request can be passed to the builder via a URL parameter:
-
-https://greymass.github.io/eosio-uri-builder/gmNgZGRkAIFXBqEFopc6760yugsVYWBggtKCMIEFRnclpF9eTWUACgAA
+https://jungle4.unicove.com/prompt/gmNgZGRkAIFXBqEFopc6760yugsVYWBggtKCMIEFRnclpF9eTWUACgAA
 
 ### Decoding a Signing Request
 
