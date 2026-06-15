@@ -1,6 +1,6 @@
 ---
 EEP: 7
-title: ESR (EOSIO Signing Request)
+title: ESR (Signing Request)
 author: Aaron Cox (@aaroncox), Johan Nordberg (@jnordberg)
 revision: 3
 status: Draft
@@ -12,7 +12,7 @@ updated: 2021-02-05
 
 **Table of Contents**
 
-- [Introduction](#ESR---The--EOSIO-Signing-Request--protocol)
+- [Introduction](#ESR---The--Signing-Request--protocol)
   - [Summary](#Summary)
   - [Abstract](#Abstract)
   - [Motivation](#Motivation)
@@ -66,7 +66,7 @@ updated: 2021-02-05
 
 ---
 
-# ESR - The "EOSIO Signing Request" protocol
+# ESR - The "Signing Request" protocol
 
 ### Summary
 
@@ -74,7 +74,7 @@ A standard protocol for an EOSIO-based signing request payload to allow communic
 
 ### Abstract
 
-EOSIO Signing Requests encapsulate transaction data for transport within multiple mediums (e.g. QR codes and hyperlinks), providing a simple cross-application signaling method between very loosely coupled applications. A standardized request data payload allows instant invocation of specific transaction templates within the user's preferred EOSIO signature provider.
+Signing Requests encapsulate transaction data for transport within multiple mediums (e.g. QR codes and hyperlinks), providing a simple cross-application signaling method between very loosely coupled applications. A standardized request data payload allows instant invocation of specific transaction templates within the user's preferred EOSIO signature provider.
 
 ### Motivation
 
@@ -86,13 +86,13 @@ While other protocols already exist within EOSIO for more intricate cross-applic
 
 # Technical Specification
 
-The following specification sets out to define the technical standards used and the actual composition of an EOSIO Signing Request payload.
+The following specification sets out to define the technical standards used and the actual composition of a Signing Request payload.
 
 > Note: Examples in this specification uses the JSON representation of the ABI data.
 
 ## Signing Request Specification
 
-In its encapsulated form, an EOSIO Signing Request is a binary data structure which has been [compressed](#Compression) and converted to [base64u](#Base64u), and is representable as a string:
+In its encapsulated form, a Signing Request is a binary data structure which has been [compressed](#Compression) and converted to [base64u](#Base64u), and is representable as a string:
 
 ```
 gmNgZGRkAIFXBqEFopc6760yugsVYWCA0YIwxgKjuxLSL6-mgmQA
@@ -325,7 +325,7 @@ sha256(
 
 ### Implementation Guidelines
 
-The following are a set of guidelines in which end user applications (e.g. signature providers) that handle EOSIO Signing Requests should respect.
+The following are a set of guidelines in which end user applications (e.g. signature providers) that handle Signing Requests should respect.
 
 - EOSIO clients **MUST NOT** automatically act upon the data contained within a Signing Request without the user's authorization.
 - EOSIO clients **MUST** decode and present the transaction data in a human readable format for review before creating a signature.
@@ -486,13 +486,13 @@ When the callback is performed in the background all the parameters are included
 
 ## Use Cases
 
-The EOSIO Signing Request format enables many different methods of communication to convey request data from any application to any signature provider.
+The Signing Request format enables many different methods of communication to convey request data from any application to any signature provider.
 
 The following are a few examples of how these payloads could be transmitted.
 
 ### Custom URI Scheme Format
 
-The EOSIO Signing Request in a custom URI scheme format uses the `scheme` and `path` components defined within [RFC 3986](https://www.ietf.org/rfc/rfc3986.txt).
+The Signing Request in a custom URI scheme format uses the `scheme` and `path` components defined within [RFC 3986](https://www.ietf.org/rfc/rfc3986.txt).
 
 ```
 esr:<signing_request>
@@ -629,7 +629,7 @@ Existing implementation of the EOSIO URI Scheme (REV 2) include:
 
 #### Example - Transaction to encoded PATH
 
-This example will take an EOSIO Signing Request and convert it into a compressed string.
+This example will take a Signing Request and convert it into a compressed string.
 
 [![Edit clever-heisenberg-gobmi](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/clever-heisenberg-gobmi?fontsize=14&hidenavigation=1&theme=dark)
 
@@ -637,7 +637,7 @@ This example will take an EOSIO Signing Request and convert it into a compressed
 /*
   EOSIO URI Specification
 
-  Example: Encoding an EOSIO Signing Request into a compressed payload
+  Example: Encoding a Signing Request into a compressed payload
 */
 
 const { Serialize } = require('eosjs');
@@ -769,7 +769,7 @@ gmNcs7jsE9uOP6rL3rrcvpMWUmN27LCdleD836_eTzFz-vCSjZGRYcm-EsZXBqEMILDA6C5QBAKYoLQQ
 
 #### Example - Encoded PATH to Transaction
 
-This example will take a compressed payload string and convert it into an EOSIO Signing Request structure.
+This example will take a compressed payload string and convert it into a Signing Request structure.
 
 [![Edit mutable-wind-ccvvn](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/mutable-wind-ccvvn?fontsize=14&hidenavigation=1&theme=dark)
 

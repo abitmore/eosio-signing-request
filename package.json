@@ -2,7 +2,7 @@
     "name": "@wharfkit/signing-request",
     "version": "3.4.0",
     "description": "Signing Request (ESR / EEP-7) encoder and decoder for Antelope blockchains",
-    "homepage": "https://github.com/greymass/eosio-signing-request",
+    "homepage": "https://github.com/wharfkit/signing-request",
     "license": "MIT",
     "main": "lib/signing-request.js",
     "module": "lib/signing-request.m.js",

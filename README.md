@@ -1,9 +1,9 @@
-# eosio-signing-request (ESR - Revision 3)
-![version](https://badgen.net/npm/v/eosio-signing-request?style=for-the-badge)
-![license](https://badgen.net/npm/license/eosio-signing-request?style=for-the-badge)
-![downloads](https://badgen.net/npm/dw/eosio-signing-request?style=for-the-badge)
+# @wharfkit/signing-request (ESR - Revision 3)
+![version](https://badgen.net/npm/v/@wharfkit/signing-request?style=for-the-badge)
+![license](https://badgen.net/npm/license/@wharfkit/signing-request?style=for-the-badge)
+![downloads](https://badgen.net/npm/dw/@wharfkit/signing-request?style=for-the-badge)
 
-A library to assist with the EOSIO Signing Request (ESR) protocol.
+A library to assist with the Signing Request (ESR) protocol.
 The full specification for ESR (Revision 3) is available here:
 
 https://github.com/eosio-eps/EEPs/blob/master/EEPS/eep-7.md
@@ -14,28 +14,28 @@ The ESR protocol allows for an application (dapp) to generate signature requests
 
 ## Installation
 
-To add eosio-signing-request to your project, install via the package manager of your choice:
+To add @wharfkit/signing-request to your project, install via the package manager of your choice:
 
 #### NPM
 
-```npm install eosio-signing-request```
+```npm install @wharfkit/signing-request```
 
 #### Yarn
 
-```yarn add eosio-signing-request```
+```yarn add @wharfkit/signing-request```
 
 ---
 
 ## Signing Request Flow
 
-In an environment where an ***application/dapp*** is requesting that an end user perform a transaction within their preferred ***signer/wallet***, each of these applications will utilize the `eosio-signing-request` library to fulfill different roles.
+In an environment where an ***application/dapp*** is requesting that an end user perform a transaction within their preferred ***signer/wallet***, each of these applications will utilize the `@wharfkit/signing-request` library to fulfill different roles.
 
 - The ***application/dapp*** will be creating and encoding the signing request.
 - The ***signer/wallet*** will be decoding and resolving the signing request.
 
 The specification itself then allows either the ***signer/wallet*** itself to broadcast the finalized transaction, or the transaction/signature themselves can be passed back to the ***application/dapp*** to broadcast.
 
-The `eosio-signing-request` library is not responsible for transporting this information between the ***application/dapp***
+The `@wharfkit/signing-request` library is not responsible for transporting this information between the ***application/dapp***
 and ***signer/wallet***, and so this topic will not be covered in this README.
 
 ---
@@ -101,7 +101,7 @@ const opts = {
 
 ### Creating a Signing Request
 
-With the above actions established, to create the signing request itself we use the eosio-signing-request library and its `create` method. The full working example to create this request [can be found here](https://github.com/greymass/eosio-signing-request-demo/blob/master/examples/encode.js).
+With the above actions established, to create the signing request itself we use the @wharfkit/signing-request library and its `create` method. The full working example to create this request [can be found here](https://github.com/greymass/eosio-signing-request-demo/blob/master/examples/encode.js).
 
 (ES8 or TypeScript)
 ```js
