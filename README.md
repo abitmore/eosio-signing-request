@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> This package lives in the WharfKit monorepo at [wharfkit/js/packages/signing-request](https://github.com/wharfkit/js/tree/dev/packages/signing-request), and this repository is archived. Open new issues and pull requests on [wharfkit/js](https://github.com/wharfkit/js).
+
 # @wharfkit/signing-request (ESR - Revision 3)
 ![version](https://badgen.net/npm/v/@wharfkit/signing-request?style=for-the-badge)
 ![license](https://badgen.net/npm/license/@wharfkit/signing-request?style=for-the-badge)
